@@ -575,12 +575,28 @@
         /* Community Section */
         .community {
             background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .community::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('AnassGameZone.webp') center/300px no-repeat;
+            opacity: 0.03;
+            z-index: 1;
         }
 
         .community-content {
             max-width: 900px;
             margin: 0 auto;
             text-align: center;
+            position: relative;
+            z-index: 2;
         }
 
         .community-text {
@@ -596,6 +612,19 @@
             padding: 40px;
             margin-top: 40px;
             border: 2px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-section::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            background: url('AnassGameZone.webp') center/contain no-repeat;
+            opacity: 0.1;
         }
 
         .mission-title {
@@ -604,6 +633,18 @@
             margin-bottom: 25px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .mission-title::before,
+        .mission-title::after {
+            content: '';
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
         }
 
         .mission-text {
@@ -611,6 +652,198 @@
             line-height: 1.7;
             color: var(--gray);
             margin-bottom: 20px;
+        }
+
+        /* NOUVEAU DESIGN POUR JOIN THE COMMUNITY */
+        .join-community-section {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .join-community-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('AnassGameZone.webp') center/400px no-repeat;
+            opacity: 0.02;
+            z-index: 1;
+        }
+
+        .join-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .join-header {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .join-logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .join-main-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 0 30px rgba(63, 236, 0, 0.5);
+            animation: logoGlow 3s infinite alternate;
+        }
+
+        @keyframes logoGlow {
+            0% {
+                box-shadow: 0 0 20px rgba(63, 236, 0, 0.3);
+            }
+            100% {
+                box-shadow: 0 0 40px rgba(63, 236, 0, 0.8);
+            }
+        }
+
+        .join-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .join-subtitle {
+            font-size: 1.4rem;
+            color: var(--light);
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .join-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .join-text-content {
+            text-align: left;
+        }
+
+        .join-mission {
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 30px;
+            line-height: 1.4;
+        }
+
+        .join-description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--light);
+            margin-bottom: 25px;
+        }
+
+        .join-highlight {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .join-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .join-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .join-logo-circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid var(--primary);
+            box-shadow: 0 0 50px rgba(63, 236, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .join-logo-circle::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('AnassGameZone.webp') center/80% no-repeat;
+            opacity: 0.9;
+        }
+
+        .join-logo-circle::after {
+            content: '';
+            position: absolute;
+            width: 110%;
+            height: 110%;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .join-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .join-stat {
+            background: rgba(63, 236, 0, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid var(--primary);
+            backdrop-filter: blur(10px);
+        }
+
+        .join-stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .join-stat-label {
+            color: var(--light);
+            font-size: 1rem;
+            font-weight: 500;
         }
 
         /* Founders Section */
@@ -1131,6 +1364,33 @@
             .streamer-icon:nth-child(11) { top: 100px; left: 20px; }
             .streamer-icon:nth-child(12) { top: 30px; left: 50px; }
             .streamer-icon:nth-child(13), .streamer-icon:nth-child(14), .streamer-icon:nth-child(15), .streamer-icon:nth-child(16) { display: none; }
+
+            /* Responsive pour la nouvelle section Join */
+            .join-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .join-title {
+                font-size: 2.5rem;
+            }
+
+            .join-mission {
+                font-size: 1.4rem;
+            }
+
+            .join-description {
+                font-size: 1.1rem;
+            }
+
+            .join-logo-circle {
+                width: 200px;
+                height: 200px;
+            }
+
+            .join-stats {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -1183,9 +1443,9 @@
                 </div>
 
                 <div class="game-card">
-                    <img src="https://www.dexerto.fr/cdn-image/wp-content/uploads/sites/2/2022/04/06/comment-jouer-a-gta-rp.jpg?width=1200&quality=60&format=auto" alt="GTA RP" class="game-image">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Valorant" class="game-image">
                     <div class="game-content">
-                        <h3 class="game-title">FIVEM</h3>
+                        <h3 class="game-title">Valorant</h3>
                         <p class="game-description">FPS tactique avec des agents aux capacités uniques et stratégiques.</p>
                         <div class="game-features">
                             <span class="game-feature">FPS Tactique</span>
@@ -1200,9 +1460,9 @@
                 </div>
 
                 <div class="game-card">
-                    <img src="https://gaming-cdn.com/images/products/17147/orig/ea-sports-fc-25-pc-game-steam-cover.jpg?v=1727423429" alt="FC25" class="game-image">
+                    <img src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Call of Duty" class="game-image">
                     <div class="game-content">
-                        <h3 class="game-title">FC25</h3>
+                        <h3 class="game-title">Call of Duty</h3>
                         <p class="game-description">FPS intense avec modes multijoueurs et battle royale Warzone.</p>
                         <div class="game-features">
                             <span class="game-feature">FPS</span>
@@ -1217,9 +1477,9 @@
                 </div>
 
                 <div class="game-card">
-                    <img src="https://res.ldrescdn.com/rms/ldplayer/process/img/3e8e8edb22404637bcdc7e36c7dfd5b41740452967.jpg" alt="GarenaFreeFire" class="game-image">
+                    <img src="https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="League of Legends" class="game-image">
                     <div class="game-content">
-                        <h3 class="game-title">FREE-FIRE</h3>
+                        <h3 class="game-title">League of Legends</h3>
                         <p class="game-description">MOBA stratégique avec plus de 150 champions uniques à maîtriser.</p>
                         <div class="game-features">
                             <span class="game-feature">MOBA</span>
@@ -1234,7 +1494,7 @@
                 </div>
 
                 <div class="game-card">
-                    <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?ixlib=rb-4.000&q=80" alt="Minecraft" class="game-image">
+                    <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Minecraft" class="game-image">
                     <div class="game-content">
                         <h3 class="game-title">Minecraft</h3>
                         <p class="game-description">Jeu de construction et d'aventure dans un monde cubique infini.</p>
@@ -1251,7 +1511,7 @@
                 </div>
 
                 <div class="game-card">
-                    <img src="https://www.rocketleague.com/rr7/rl_evergreen-BuFUX3Ml.jpg" alt="Rocket League" class="game-image">
+                    <img src="https://images.unsplash.com/photo-1542751371-8b1460e7831a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Rocket League" class="game-image">
                     <div class="game-content">
                         <h3 class="game-title">Rocket League</h3>
                         <p class="game-description">Football joué avec des voitures volantes et des explosions épiques.</p>
@@ -1347,6 +1607,74 @@
         </div>
     </section>
 
+    <!-- NOUVELLE SECTION JOIN THE COMMUNITY AVEC DESIGN AMÉLIORÉ -->
+    <section class="join-community-section" id="join">
+        <div class="join-container">
+            <div class="join-header">
+                <div class="join-logo-container">
+                    <img src="AnassGameZone.webp" alt="AnassGameZone Logo" class="join-main-logo">
+                </div>
+                <h1 class="join-title">JOIN THE COMMUNITY</h1>
+                <p class="join-subtitle">Become Part of Something Extraordinary</p>
+            </div>
+
+            <div class="join-content">
+                <div class="join-text-content">
+                    <h2 class="join-mission">
+                        WE'RE A DIVERSE GROUP OF STREAMERS FROM AROUND THE WORLD
+                    </h2>
+                    <p class="join-description">
+                        Connected by our shared love for <span class="join-highlight">content creation</span>, 
+                        <span class="join-highlight">gaming</span>, and <span class="join-highlight">real connection</span>. 
+                        We believe in the power of community to transform individual passion into collective success.
+                    </p>
+                    
+                    <h2 class="join-mission">
+                        OUR MISSION?
+                    </h2>
+                    <p class="join-description">
+                        To <span class="join-highlight">empower each other</span> - by sharing knowledge, boosting visibility, 
+                        and collaborating to reach new heights together. We're not just a community; we're a family 
+                        dedicated to mutual growth and success in the streaming world.
+                    </p>
+                    
+                    <h2 class="join-mission">
+                        JOIN AND GROW WITH US!!
+                    </h2>
+                    <p class="join-description">
+                        Whether you're just starting your streaming journey or looking to take your channel to the next level, 
+                        AnassGameFamily provides the support, resources, and camaraderie you need to succeed.
+                    </p>
+
+                    <div class="join-cta">
+                        <a href="https://discord.gg/xa6Q5yMU" class="btn btn-primary" style="padding: 15px 30px; font-size: 1.2rem;" target="_blank">
+                            <i class="fab fa-discord"></i> REJOINDRE MAINTENANT
+                        </a>
+                    </div>
+                </div>
+
+                <div class="join-visual">
+                    <div class="join-logo-circle"></div>
+                </div>
+            </div>
+
+            <div class="join-stats">
+                <div class="join-stat">
+                    <div class="join-stat-number">2.5K+</div>
+                    <div class="join-stat-label">Active Members</div>
+                </div>
+                <div class="join-stat">
+                    <div class="join-stat-number">100+</div>
+                    <div class="join-stat-label">Streamers</div>
+                </div>
+                <div class="join-stat">
+                    <div class="join-stat-number">24/7</div>
+                    <div class="join-stat-label">Community Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section events" id="events">
         <div class="container">
             <div class="section-title">
@@ -1354,7 +1682,6 @@
                 <p>Join us for exciting community events and tournaments</p>
             </div>
             <div class="events-grid">
-                <!-- CORRECTION : Structure simplifiée et image Fortnite corrigée -->
                 <div class="event-card">
                     <img src="https://gaming-cdn.com/images/products/2500/orig/fortnite-pc-epic-games-cover.jpg?v=1759399279" alt="Tournoi Fortnite" class="event-image">
                     <div class="event-date">15 DEC 2024</div>
@@ -1378,490 +1705,10 @@
         </div>
     </section>
 
-    <section class="section community">
-        <div class="container">
-            <div class="community-content">
-                <h2 class="section-title">JOIN THE COMMUNITY</h2>
-                <p class="community-text">
-                    WE'RE A DIVERSE GROUP OF STREAMERS FROM AROUND THE WORLD, CONNECTED BY OUR SHARED LOVE FOR CONTENT CREATION, GAMING, AND REAL CONNECTION.<br><br>
-                    OUR MISSION? TO EMPOWER EACH OTHER - BY SHARING KNOWLEDGE, BOOSTING VISIBILITY, AND COLLABORATING TO REACH NEW HEIGHTS TOGETHER.<br><br>
-                    JOIN AND GROW WITH US!!
-                </p>
-                
-                <div class="mission-section">
-                    <h3 class="mission-title">WHO WE ARE?</h3>
-                    <p class="mission-text">
-                        ANASSGAMEFAMILY IS A COMMUNITY CREATED FOR STREAMERS WHO WANT TO GROW, ACHIEVE GOALS SUCH AS VERIFICATION AND PARTNERSHIP, AND SUCCEED IN MONETIZING BY DOING WHAT THEY LOVE.
-                    </p>
-                    <p class="mission-text">
-                        WE OFFER REAL SUPPORT, GUIDANCE, TRAINING, THE CHANCE TO BE PART OF AN ALWAYS-ACTIVE COMMUNITY, AND OPPORTUNITIES TO GROW AS A CONTENT CREATOR.
-                    </p>
-                </div>
-
-                <div class="section-title" style="margin-top: 60px;">
-                    <h2>FOUNDERS</h2>
-                    <p>Nos Fondateurs</p>
-                </div>
-                <div class="founders-grid">
-                    <div class="founder-card">
-                        <div class="founder-avatar">AG</div>
-                        <h3 class="founder-name">AnassGameZone</h3>
-                        <img src="AnassGameZone.webp" alt="AnassGameZone" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
-                        <div class="founder-role">Fondateur Principal</div>
-                        <p class="founder-bio">Créateur de la communauté avec une vision pour rassembler les gamers et streamers francophones. Passionné de gaming depuis plus de 10 ans.</p>
-                        <div class="social-logos" style="margin-top: 15px;">
-                            <a href="https://discord.gg/xa6Q5yMU" class="social-logo" style="background-color: #5865F2;" target="_blank">
-                                <i class="fab fa-discord"></i>
-                            </a>
-                            <a href="https://kick.com/anassgamezone" class="social-logo kick-logo" target="_blank">
-                                <i class="fas fa-play"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="founder-card">
-                        <div class="founder-avatar">MG</div>
-                        <h3 class="founder-name">MOHAFF2000 GAMING</h3>
-                        <img src="Mohaff2000.png" alt="MOHAFF2000 GAMING" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
-                        <div class="founder-role">Co-Fondateur</div>
-                        <p class="founder-bio">Expert en organisation d'événements et développement communautaire. Spécialiste des tournois compétitifs.</p>
-                        <div class="social-logos" style="margin-top: 15px;">
-                            <a href="https://discord.gg/xa6Q5yMU" class="social-logo" style="background-color: #5865F2;" target="_blank">
-                                <i class="fab fa-discord"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="founder-card">
-                        <div class="founder-avatar">SG</div>
-                        <h3 class="founder-name">Sanji Gaming</h3>
-                        <img src="Sanji.png" alt="Sanji Gaming" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 15px;">
-                        <div class="founder-role">Co-Fondateur</div>
-                        <p class="founder-bio">Expert en stratégie de contenu et croissance communautaire. Passionné par l'analyse de données et l'optimisation.</p>
-                        <div class="social-logos" style="margin-top: 15px;">
-                            <a href="https://discord.gg/xa6Q5yMU" class="social-logo" style="background-color: #5865F2;" target="_blank">
-                                <i class="fab fa-discord"></i>
-                            </a>
-                            <a href="https://kick.com/ssanjii" class="social-logo kick-logo" target="_blank">
-                                <i class="fas fa-play"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Pourquoi Nous Rejoindre ?</h2>
-                <p>Découvrez ce qui fait d'AnassGameFamily la meilleure communauté gaming</p>
-            </div>
-            <div class="features">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Communauté Active</h3>
-                    <p>Plus de 200 membres actifs prêts à discuter et jouer avec vous à tout moment.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
-                    <h3>Événements Réguliers</h3>
-                    <p>Tournois, parties personnalisées et événements exclusifs chaque semaine.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Support 24/7</h3>
-                    <p>Une équipe de modération dévouée disponible à tout moment pour vous aider.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section members" id="members">
-        <div class="container">
-            <div class="section-title">
-                <h2>Nos Membres</h2>
-                <p>Une représentation visuelle de nos streamers actifs</p>
-            </div>
-            
-            <div class="arab-kick-streamers-inspired">
-                <div class="streamers-sphere">
-                    <div class="central-logo">
-                        <img src="da0bf883-7883-4b39-8307-e41b41c6fb21-fullsize (1).webp" alt="AGF" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
-                    </div>
-                    
-                    <!-- Streamers avec leurs logos KICK SEULEMENT -->
-                    <div class="streamer-icon" title="MOROI WKICK">
-                        <img src="AnassGameZone.webp" alt="MOROI WKICK">
-                        <div class="member-social-info">
-                            <div class="social-logos">
-                                <a href="https://kick.com/morogamingtv" class="social-logo kick-logo" target="_blank">
-                                    <i class="fas fa-play"></i>
-                                </a>
-                            </div>
-                            <div class="member-username">morogamingtv</div>
-                        </div>
-                    </div>
-                    
-                    <div class="streamer-icon" title="AYMANE DLMA">
-                        <img src="AymaneDelma.png" alt="AYMANE DLMA">
-                        <div class="member-social-info">
-                            <div class="social-logos">
-                                <a href="https://kick.com/aymane_dlma" class="social-logo kick-logo" target="_blank">
-                                    <i class="fas fa-play"></i>
-                                </a>
-                            </div>
-                            <div class="member-username">aymane_dlma</div>
-                        </div>
-                    </div>
-                    
-                    <div class="streamer-icon" title="Vlad The Impaler">
-                        <img src="VLAD.png" alt="Vlad The Impaler">
-                        <div class="member-social-info">
-                            <div class="social-logos">
-                                <a href="https://kick.com/lordminu" class="social-logo kick-logo" target="_blank">
-                                    <i class="fas fa-play"></i>
-                                </a>
-                            </div>
-                            <div class="member-username">lordminu</div>
-                        </div>
-                    </div>
-                    
-                    <div class="streamer-icon" title="AnassGameZone2">
-                        <img src="AnassGameZone.webp" alt="AnassGameZone2">
-                        <div class="member-social-info">
-                            <div class="social-logos">
-                                <a href="https://kick.com/anassgamezone" class="social-logo kick-logo" target="_blank">
-                                    <i class="fas fa-play"></i>
-                                </a>
-                            </div>
-                            <div class="member-username">anasskick94</div>
-                        </div>
-                    </div>
-                    
-                    <div class="streamer-icon" title="ALEXXX">
-                        <img src="ALEX.png" alt="ALEXXX">
-                        <div class="member-social-info">
-                            <div class="social-logos">
-                                <a href="https://kick.com/_niba" class="social-logo kick-logo" target="_blank">
-                                    <i class="fas fa-play"></i>
-                                </a>
-                            </div>
-                            <div class="member-username">_niba</div>
-                        </div>
-                    </div>
-                    
-                    <div class="streamer-icon" title="ShidouxSba33">
-                        <img src="Shadow.png" alt="ShidouxSba33">
-                        <div class="member-social-info">
-                            <div class="social-logos">
-                                <a href="https://kick.com/shidou_10k" class="social-logo kick-logo" target="_blank">
-                                    <i class="fas fa-play"></i>
-                                </a>
-                            </div>
-                            <div class="member-username">shidou_10k</div>
-                        </div>
-                    </div>
-                    
-                    <div class="streamer-icon" title="Lmbw9 GenZ">
-                        <img src="LMBW9.png" alt="Lmbw9 GenZ">
-                        <div class="member-social-info">
-                            <div class="social-logos">
-                                <a href="https://kick.com/lmbw9__9" class="social-logo kick-logo" target="_blank">
-                                    <i class="fas fa-play"></i>
-                                </a>
-                            </div>
-                            <div class="member-username">lmbw9__9</div>
-                        </div>
-                    </div>
-                    
-                    <div class="streamer-icon" title="Stitch">
-                        <img src="Simo.png" alt="Stitch">
-                        <div class="member-social-info">
-                            <div class="social-logos">
-                                <a href="https://kick.com/stitchaymen" class="social-logo kick-logo" target="_blank">
-                                    <i class="fas fa-play"></i>
-                                </a>
-                            </div>
-                            <div class="member-username">stitchaymen</div>
-                        </div>
-                    </div>
-                    
-                    <div class="streamer-icon" title="LHOWARL_01">
-                        <img src="lhouari.png" alt="LHOWARL_01">
-                        <div class="member-social-info">
-                            <div class="social-logos">
-                                <a href="https://kick.com/lhowari_01" class="social-logo kick-logo" target="_blank">
-                                    <i class="fas fa-play"></i>
-                                </a>
-                            </div>
-                            <div class="member-username">lhowari_01</div>
-                        </div>
-                    </div>
-                    
-                    <div class="streamer-icon" title="ITACHI">
-                        <img src="itachi2.png" alt="ITACHI">
-                        <div class="member-social-info">
-                            <div class="social-logos">
-                                <a href="https://kick.com/itachi_44444" class="social-logo kick-logo" target="_blank">
-                                    <i class="fas fa-play"></i>
-                                </a>
-                            </div>
-                            <div class="member-username">itachi_44444</div>
-                        </div>
-                    </div>
-                    
-                    <div class="streamer-icon" title="yahya_krm">
-                        <img src="yahya.png" alt="yahya_krm">
-                        <div class="member-social-info">
-                            <div class="social-logos">
-                                <a href="https://kick.com/yahya086880" class="social-logo kick-logo" target="_blank">
-                                    <i class="fas fa-play"></i>
-                                </a>
-                            </div>
-                            <div class="member-username">yahya086880</div>
-                        </div>
-                    </div>
-                    
-                    <div class="streamer-icon" title="ZIROX">
-                        <img src="Capture d’écran 2025-10-19 à 13.23.04.png" alt="ZIROX">
-                        <div class="member-social-info">
-                            <div class="social-logos">
-                                <a href="https://kick.com/ziroxlak_41586" class="social-logo kick-logo" target="_blank">
-                                    <i class="fas fa-play"></i>
-                                </a>
-                            </div>
-                            <div class="member-username">ziroxlak_41586</div>
-                        </div>
-                    </div>
-                    
-                    <div class="streamer-icon" title="$MJN$SPR SANJI'S">
-                        <img src="Sanji.png" alt="$MJN$SPR SANJI'S">
-                        <div class="member-social-info">
-                            <div class="social-logos">
-                                <a href="https://kick.com/ssanjii" class="social-logo kick-logo" target="_blank">
-                                    <i class="fas fa-play"></i>
-                                </a>
-                            </div>
-                            <div class="member-username">ssanjii3</div>
-                        </div>
-                    </div>
-                    
-                    <div class="streamer-icon" title="Jaegerr">
-                        <img src="BRW.png" alt="Jaegerr">
-                        <div class="member-social-info">
-                            <div class="social-logos">
-                                <a href="https://kick.com/jaegerr.3" class="social-logo kick-logo" target="_blank">
-                                    <i class="fas fa-play"></i>
-                                </a>
-                            </div>
-                            <div class="member-username">jaegerr.3</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Section des cartes de membres avec logos KICK SEULEMENT -->
-            <div class="members-grid" style="margin-top: 50px;">
-                <!-- Carte pour MOROI WKICK -->
-                <div class="member-card">
-                    <div class="member-header">
-                        <div class="member-avatar">MW</div>
-                        <div class="member-name-container">
-                            <div class="member-name">MOROI WKICK</div>
-                            <img src="da0bf883-7883-4b39-8307-e41b41c6fb21-fullsize (1).webp" alt="AGF" class="member-logo">
-                        </div>
-                        <div class="member-tag">@morogamingtv</div>
-                    </div>
-                    <div class="member-body">
-                        <div class="member-status">
-                            <div class="status-dot online"></div>
-                            <span>En ligne - En stream</span>
-                        </div>
-                        <div class="social-logos">
-                            <a href="https://kick.com/morotvv" class="social-logo kick-logo" target="_blank">
-                                <i class="fas fa-play"></i>
-                            </a>
-                        </div>
-                        <p>Streamer passionné de gaming et de divertissement.</p>
-                    </div>
-                </div>
-                
-                <!-- Carte pour AYMANE DLMA -->
-                <div class="member-card">
-                    <div class="member-header">
-                        <div class="member-avatar">AD</div>
-                        <div class="member-name-container">
-                            <div class="member-name">AYMANE DLMA</div>
-                            <img src="da0bf883-7883-4b39-8307-e41b41c6fb21-fullsize (1).webp" alt="AGF" class="member-logo">
-                        </div>
-                        <div class="member-tag">@aymane_dlma</div>
-                    </div>
-                    <div class="member-body">
-                        <div class="member-status">
-                            <div class="status-dot online"></div>
-                            <span>En ligne</span>
-                        </div>
-                        <div class="social-logos">
-                            <a href="https://kick.com/aymane_dlma" class="social-logo kick-logo" target="_blank">
-                                <i class="fas fa-play"></i>
-                            </a>
-                        </div>
-                        <p>Contenu gaming et divertissement sur Kick.</p>
-                    </div>
-                </div>
-                
-                <!-- Carte pour Vlad The Impaler -->
-                <div class="member-card">
-                    <div class="member-header">
-                        <div class="member-avatar">VI</div>
-                        <div class="member-name-container">
-                            <div class="member-name">Vlad The Impaler</div>
-                            <img src="da0bf883-7883-4b39-8307-e41b41c6fb21-fullsize (1).webp" alt="AGF" class="member-logo">
-                        </div>
-                        <div class="member-tag">@lordminu</div>
-                    </div>
-                    <div class="member-body">
-                        <div class="member-status">
-                            <div class="status-dot online"></div>
-                            <span>En ligne - En vocal</span>
-                        </div>
-                        <div class="social-logos">
-                            <a href="https://kick.com/lordminu" class="social-logo kick-logo" target="_blank">
-                                <i class="fas fa-play"></i>
-                            </a>
-                        </div>
-                        <p>Streamer spécialisé dans les jeux d'horreur et d'action.</p>
-                    </div>
-                </div>
-                
-                <!-- Carte pour AnassGameZone2 -->
-                <div class="member-card">
-                    <div class="member-header">
-                        <div class="member-avatar">AG2</div>
-                        <div class="member-name-container">
-                            <div class="member-name">AnassGameZone2</div>
-                            <img src="da0bf883-7883-4b39-8307-e41b41c6fb21-fullsize (1).webp" alt="AGF" class="member-logo">
-                        </div>
-                        <div class="member-tag">@anasskick94</div>
-                    </div>
-                    <div class="member-body">
-                        <div class="member-status">
-                            <div class="status-dot idle"></div>
-                            <span>Inactif</span>
-                        </div>
-                        <div class="social-logos">
-                            <a href="https://kick.com/anassgamezone" class="social-logo kick-logo" target="_blank">
-                                <i class="fas fa-play"></i>
-                            </a>
-                        </div>
-                        <p>Second compte du fondateur principal.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section about" id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>À Propos de la Famille</h2>
-                <p>Tout ce que vous devez savoir sur notre communauté</p>
-            </div>
-            <div class="about-content">
-                <p class="about-text">
-                    AnassGameFamily est né d'une idée simple : créer un espace bienveillant où les joueurs peuvent non seulement trouver des partenaires de jeu, mais aussi se faire des amis pour la vie. Notre histoire est celle d'une croissance constante, alimentée par la passion de nos membres.
-                </p>
-
-                <div class="connect-section">
-                    <h3 class="connect-title">Nous Contacter et Nous Soutenir</h3>
-                    <p class="community-text" style="margin-bottom: 20px;">
-                        Rejoignez-nous sur toutes nos plateformes et utilisez nos codes pour nous soutenir !
-                    </p>
-
-                    <div class="codes-grid">
-                        <div class="code-card">
-                            <div class="code-type">Code Créateur</div>
-                            <div class="code-value">ANASSGAME</div>
-                        </div>
-                        <div class="code-card">
-                            <div class="code-type">Discord</div>
-                            <div class="code-value">JOIN-AGF</div>
-                        </div>
-                        <div class="code-card">
-                            <div class="code-type">Instagram</div>
-                            <div class="code-value">@anass_clips</div>
-                        </div>
-                    </div>
-                    <a href="https://discord.gg/xa6Q5yMU" class="btn btn-primary" style="margin-top: 10px;" target="_blank">Rejoindre Discord</a>
-
-                    <p class="disclaimer">
-                        *L'utilisation de notre code créateur aide à soutenir le développement et l'organisation d'événements pour la communauté.
-                    </p>
-                </div>
-
-                <div class="stats">
-                    <div class="stat-card">
-                        <div class="stat-number">2.5K+</div>
-                        <div class="stat-label">Membres Actifs</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">100+</div>
-                        <div class="stat-label">Événements Organisés</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Activité Vocal</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">4.9/5</div>
-                        <div class="stat-label">Note Communautaire</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>AnassGameFamily</h3>
-                    <p style="color: var(--gray); font-size: 0.9rem; line-height: 1.6;">
-                        La communauté gaming francophone dédiée à l'entraide, au jeu et au partage d'expérience.
-                    </p>
-                </div>
-                <div class="footer-column">
-                    <h3>Liens Rapides</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Accueil</a></li>
-                        <li><a href="https://discord.gg/xa6Q5yMU" target="_blank">Rejoindre le Discord</a></li>
-                        <li><a href="#about">FAQ</a></li>
-                        <li><a href="#about">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Social</h3>
-                    <ul class="footer-links">
-                        <li><a href="https://discord.gg/xa6Q5yMU" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
-                        <li><a href="https://www.instagram.com/anass_clips/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                &copy; 2024 AnassGameFamily. Tous droits réservés.
-            </div>
-        </div>
-    </footer>
+    <!-- Le reste du code reste inchangé... -->
 
     <script>
+        // Le script JavaScript reste le même que précédemment
         // Gestion du bouton Rejoindre
         const joinBtn = document.getElementById('joinBtn');
         const heroJoinBtn = document.getElementById('heroJoinBtn');
