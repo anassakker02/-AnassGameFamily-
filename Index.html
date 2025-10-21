@@ -6,17 +6,6 @@
     <title>AnassGameFamily - Serveur Gaming Communautaire</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- FAVICON -->
-    <link rel="icon" type="image/x-icon" href="AnassGameZone.webp">
-    <link rel="shortcut icon" href="AnassGameZone.webp" type="image/x-icon">
-    <link rel="apple-touch-icon" href="AnassGameZone.webp">
-    <link rel="apple-touch-icon" sizes="180x180" href="AnassGameZone.webp">
-    <meta name="msapplication-TileImage" content="AnassGameZone.webp">
-    <meta name="msapplication-TileColor" content="#3fec00">
-    <link rel="icon" type="image/png" sizes="32x32" href="AnassGameZone.webp">
-    <link rel="icon" type="image/png" sizes="16x16" href="AnassGameZone.webp">
-    <meta name="theme-color" content="#3fec00">
-    
     <style>
         * {
             margin: 0;
@@ -70,15 +59,16 @@
             gap: 10px;
         }
 
-        .logo-icon {
+        .logo-img {
             width: 40px;
             height: 40px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             border-radius: 10px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             font-weight: bold;
+            color: var(--dark);
             font-size: 1.2rem;
         }
 
@@ -162,246 +152,6 @@
             box-shadow: 0 5px 15px rgba(63, 236, 0, 0.4);
         }
 
-        /* Section Jeux Vidéo */
-        .games-section {
-            display: none;
-            padding: 80px 0;
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
-        }
-
-        .games-section.active {
-            display: block;
-        }
-
-        .games-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .game-card {
-            background: var(--dark);
-            border-radius: 15px;
-            overflow: hidden;
-            transition: all 0.3s;
-            border: 2px solid var(--primary);
-            position: relative;
-        }
-
-        .game-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(63, 236, 0, 0.3);
-        }
-
-        .game-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 2px solid var(--primary);
-        }
-
-        .game-content {
-            padding: 20px;
-        }
-
-        .game-title {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            color: var(--light);
-        }
-
-        .game-description {
-            color: var(--gray);
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-
-        .game-features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 15px;
-        }
-
-        .game-feature {
-            background: rgba(63, 236, 0, 0.2);
-            color: var(--primary);
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .game-actions {
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn-small {
-            padding: 8px 15px;
-            font-size: 0.9rem;
-        }
-
-        /* Modal de Connexion */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 10000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background: var(--secondary);
-            margin: 10% auto;
-            padding: 0;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 500px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            border: 2px solid var(--primary);
-            animation: modalSlide 0.3s ease-out;
-        }
-
-        @keyframes modalSlide {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .modal-header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            padding: 20px;
-            border-radius: 13px 13px 0 0;
-            text-align: center;
-        }
-
-        .modal-header h2 {
-            color: var(--dark);
-            font-size: 1.8rem;
-            margin: 0;
-        }
-
-        .modal-body {
-            padding: 30px;
-        }
-
-        .login-options {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .login-option {
-            background: var(--dark);
-            border: 2px solid var(--primary);
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .login-option:hover {
-            background: rgba(63, 236, 0, 0.1);
-            transform: translateY(-3px);
-        }
-
-        .login-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--primary);
-        }
-
-        .login-title {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--light);
-        }
-
-        .login-description {
-            color: var(--gray);
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-
-        .close {
-            color: var(--dark);
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            position: absolute;
-            right: 20px;
-            top: 15px;
-        }
-
-        .close:hover {
-            color: var(--secondary);
-        }
-
-        /* Formulaire de connexion */
-        .login-form {
-            display: none;
-            background: var(--dark);
-            padding: 25px;
-            border-radius: 10px;
-            margin-top: 20px;
-            border: 1px solid var(--primary);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--light);
-            font-weight: 500;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid var(--gray);
-            border-radius: 6px;
-            background: var(--secondary);
-            color: var(--light);
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        .form-actions {
-            display: flex;
-            gap: 10px;
-            justify-content: flex-end;
-        }
-
-        .btn-cancel {
-            background: var(--gray);
-            color: var(--light);
-        }
-
-        .btn-cancel:hover {
-            background: #9E9E9E;
-        }
-
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(15, 15, 27, 0.8), rgba(15, 15, 27, 0.9)), 
@@ -425,6 +175,22 @@
             -webkit-text-fill-color: transparent;
         }
 
+        .hero-logo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--dark);
+            box-shadow: 0 0 30px rgba(63, 236, 0, 0.5);
+            border: 4px solid var(--light);
+        }
+
         .hero p {
             font-size: 1.2rem;
             margin-bottom: 30px;
@@ -439,239 +205,12 @@
             margin-top: 30px;
         }
 
-        /* Features Section */
-        .section {
-            padding: 80px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--light);
-        }
-
-        .section-title p {
-            color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .feature-card {
-            background: var(--secondary);
-            border-radius: 10px;
-            padding: 30px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #00ff04f8;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-            border-color: rgba(4, 255, 0, 0.3);
-        }
-
-        .feature-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 1.8rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--light);
-        }
-
-        .feature-card p {
-            color: var(--gray);
-            line-height: 1.6;
-        }
-
-        /* Events Section */
-        .events {
-            background: var(--secondary);
-        }
-
-        .events-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .event-card {
-            background: var(--dark);
-            border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s;
-            border: 2px solid var(--primary);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .event-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
-        }
-
-        .event-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(63, 236, 0, 0.2);
-        }
-
-        .event-date {
-            font-size: 1.2rem;
-            color: var(--primary);
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .event-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--light);
-        }
-
-        .event-description {
-            color: var(--gray);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        /* Styles pour l'image d'événement */
-        .event-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            border: 2px solid var(--primary);
-        }
-
-        /* Community Section */
-        .community {
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .community::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('AnassGameZone.webp') center/300px no-repeat;
-            opacity: 0.03;
-            z-index: 1;
-        }
-
-        .community-content {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .community-text {
-            font-size: 1.3rem;
-            line-height: 1.8;
-            margin-bottom: 40px;
-            color: var(--light);
-        }
-
-        .mission-section {
-            background: var(--dark);
-            border-radius: 15px;
-            padding: 40px;
-            margin-top: 40px;
-            border: 2px solid var(--primary);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .mission-section::before {
-            content: '';
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 80px;
-            height: 80px;
-            background: url('AnassGameZone.webp') center/contain no-repeat;
-            opacity: 0.1;
-        }
-
-        .mission-title {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .mission-title::before,
-        .mission-title::after {
-            content: '';
-            flex: 1;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--primary), transparent);
-        }
-
-        .mission-text {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: var(--gray);
-            margin-bottom: 20px;
-        }
-
-        /* NOUVEAU DESIGN POUR JOIN THE COMMUNITY */
+        /* Join Community Section */
         .join-community-section {
             background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
             padding: 80px 0;
             position: relative;
             overflow: hidden;
-        }
-
-        .join-community-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('AnassGameZone.webp') center/400px no-repeat;
-            opacity: 0.02;
-            z-index: 1;
         }
 
         .join-container {
@@ -699,7 +238,13 @@
             width: 120px;
             height: 120px;
             border-radius: 50%;
-            object-fit: cover;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--dark);
             border: 4px solid var(--primary);
             box-shadow: 0 0 30px rgba(63, 236, 0, 0.5);
             animation: logoGlow 3s infinite alternate;
@@ -790,12 +335,12 @@
         }
 
         .join-logo-circle::before {
-            content: '';
+            content: 'AGF';
             position: absolute;
-            width: 100%;
-            height: 100%;
-            background: url('AnassGameZone.webp') center/80% no-repeat;
-            opacity: 0.9;
+            font-size: 4rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-shadow: 0 0 20px rgba(63, 236, 0, 0.5);
         }
 
         .join-logo-circle::after {
@@ -846,57 +391,168 @@
             font-weight: 500;
         }
 
-        /* Founders Section */
-        .founders-grid {
+        /* Events Section */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--light);
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .events {
+            background: var(--secondary);
+        }
+
+        .events-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .event-card {
+            background: var(--dark);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(63, 236, 0, 0.2);
+        }
+
+        .event-date {
+            font-size: 1.2rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .event-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--light);
+        }
+
+        .event-description {
+            color: var(--gray);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Games Section */
+        .games-section {
+            display: none;
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
+        }
+
+        .games-section.active {
+            display: block;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
 
-        .founder-card {
-            background: var(--secondary);
+        .game-card {
+            background: var(--dark);
             border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            transition: transform 0.3s;
-            border: 1px solid rgba(63, 236, 0, 0.3);
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 2px solid var(--primary);
+            position: relative;
         }
 
-        .founder-card:hover {
-            transform: translateY(-5px);
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(63, 236, 0, 0.3);
         }
 
-        .founder-avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            margin: 0 auto 20px;
+        .game-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
-            font-weight: bold;
-            border: 4px solid var(--dark);
-        }
-
-        .founder-name {
-            font-size: 1.4rem;
-            color: var(--light);
-            margin-bottom: 10px;
-        }
-
-        .founder-role {
+            font-size: 3rem;
             color: var(--primary);
-            font-weight: 600;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .game-content {
+            padding: 20px;
+        }
+
+        .game-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--light);
+        }
+
+        .game-description {
+            color: var(--gray);
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .game-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
             margin-bottom: 15px;
         }
 
-        .founder-bio {
-            color: var(--gray);
-            font-size: 0.95rem;
-            line-height: 1.5;
+        .game-feature {
+            background: rgba(63, 236, 0, 0.2);
+            color: var(--primary);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .game-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-small {
+            padding: 8px 15px;
+            font-size: 0.9rem;
         }
 
         /* Members Section */
@@ -930,21 +586,6 @@
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
         }
 
-        /* Nouveaux styles pour le nom et le logo */
-        .member-name-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 5px;
-        }
-        
-        .member-logo {
-            width: 20px;
-            height: 20px;
-            margin-left: 8px;
-            border-radius: 50%;
-        }
-
         .member-avatar {
             width: 80px;
             height: 80px;
@@ -956,12 +597,14 @@
             justify-content: center;
             font-weight: bold;
             font-size: 1.5rem;
+            color: var(--primary);
             border: 3px solid var(--dark);
         }
 
         .member-name {
             font-size: 1.3rem;
             font-weight: bold;
+            margin-bottom: 5px;
         }
 
         .member-tag {
@@ -990,112 +633,40 @@
             background-color: var(--success);
         }
 
-        .idle {
-            background-color: #00CC66;
-        }
-
-        .dnd {
-            background-color: #00CC66;
-        }
-
         .offline {
             background-color: var(--gray);
         }
 
-        /* Stats Section */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 50px;
+        .social-logos {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .social-logo {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        
+        .social-logo:hover {
+            transform: scale(1.1);
+        }
+        
+        .kick-logo {
+            background-color: #3fec00;
         }
 
-        .stat-card {
-            background: var(--secondary);
-            border-radius: 10px;
-            padding: 30px 20px;
-            text-align: center;
-            border: 1px solid rgba(63, 236, 0, 0.3);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        .stat-label {
-            color: var(--gray);
-            font-size: 1rem;
-        }
-
-        /* About Section */
-        .about {
-            background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
-            padding: 80px 0;
-        }
-
-        .about-content {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .about-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 40px;
-            color: var(--light);
-        }
-
-        .connect-section {
-            background: var(--secondary);
-            border-radius: 15px;
-            padding: 40px;
-            margin: 40px 0;
-            border: 2px solid var(--primary);
-        }
-
-        .connect-title {
-            font-size: 1.8rem;
-            color: var(--primary);
-            margin-bottom: 25px;
-        }
-
-        .codes-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-
-        .code-card {
-            background: var(--dark);
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            border: 1px solid var(--primary);
-        }
-
-        .code-type {
-            font-size: 1rem;
-            color: var(--gray);
-            margin-bottom: 10px;
-        }
-
-        .code-value {
-            font-size: 1.4rem;
-            color: var(--primary);
-            font-weight: bold;
-            font-family: 'Courier New', monospace;
-        }
-
-        .disclaimer {
-            color: var(--gray);
-            font-size: 0.9rem;
-            margin-top: 30px;
-            font-style: italic;
+        .discord-logo {
+            background-color: #5865F2;
         }
 
         /* Footer */
@@ -1143,145 +714,6 @@
             color: var(--gray);
         }
 
-        /* Styles spécifiques pour la section inspirée par l'image */
-        .arab-kick-streamers-inspired {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 80px 0;
-            background-color: var(--dark);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .streamers-sphere {
-            position: relative;
-            width: 600px;
-            height: 600px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 0 50px rgba(63, 236, 0, 0.3);
-            border: 2px solid rgba(63, 236, 0, 0.5);
-            animation: pulse-border 5s infinite alternate ease-in-out;
-            margin: 50px 0;
-        }
-
-        /* Animation de l'effet de bordure/sphère */
-        @keyframes pulse-border {
-            0% {
-                box-shadow: 0 0 30px rgba(63, 236, 0, 0.2);
-                transform: scale(1);
-            }
-            100% {
-                box-shadow: 0 0 80px rgba(63, 236, 0, 0.7);
-                transform: scale(1.02);
-            }
-        }
-
-        .central-logo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background-color: var(--dark);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--kick-green);
-            box-shadow: 0 0 20px var(--kick-green), 0 0 5px var(--kick-green) inset;
-            z-index: 10;
-        }
-
-        .streamer-icon {
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: var(--secondary);
-            border: 3px solid transparent;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            z-index: 5;
-        }
-
-        .streamer-icon:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 15px var(--primary);
-        }
-
-        .streamer-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        /* Styles pour les différentes positions sur le cercle */
-        .streamer-icon:nth-child(1) { top: 10px; left: 50%; margin-left: -40px; border-color: #f00; }
-        .streamer-icon:nth-child(2) { top: 50px; right: 80px; border-color: #ff8c00; }
-        .streamer-icon:nth-child(3) { top: 150px; right: 30px; border-color: #ff0; }
-        .streamer-icon:nth-child(4) { top: 250px; right: 0px; border-color: var(--kick-green); }
-        .streamer-icon:nth-child(5) { bottom: 200px; right: 50px; border-color: #0ff; }
-        .streamer-icon:nth-child(6) { bottom: 100px; right: 100px; border-color: #00f; }
-        .streamer-icon:nth-child(7) { bottom: 20px; right: 50%; margin-right: -40px; border-color: #8a2be2; }
-        .streamer-icon:nth-child(8) { bottom: 100px; left: 100px; border-color: #ff1493; }
-        .streamer-icon:nth-child(9) { bottom: 200px; left: 50px; border-color: #ffa07a; }
-        .streamer-icon:nth-child(10) { top: 250px; left: 0px; border-color: #7fffd4; }
-        .streamer-icon:nth-child(11) { top: 150px; left: 30px; border-color: #808000; }
-        .streamer-icon:nth-child(12) { top: 50px; left: 80px; border-color: #f08080; }
-        .streamer-icon:nth-child(13) { top: 100px; left: 180px; border-color: #20b2aa; }
-        .streamer-icon:nth-child(14) { top: 100px; right: 180px; border-color: #d2691e; }
-        .streamer-icon:nth-child(15) { bottom: 180px; left: 180px; border-color: #9370db; }
-        .streamer-icon:nth-child(16) { bottom: 180px; right: 180px; border-color: #00fa9a; }
-
-        /* NOUVEAUX STYLES POUR LES LOGOS KICK SEULEMENT */
-        .social-logos {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        
-        .social-logo {
-            width: 24px;
-            height: 24px;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: white;
-            text-decoration: none;
-            transition: transform 0.2s;
-        }
-        
-        .social-logo:hover {
-            transform: scale(1.1);
-        }
-        
-        .kick-logo {
-            background-color: #3fec00;
-        }
-        
-        .member-social-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 10px;
-        }
-        
-        .member-username {
-            font-size: 0.8rem;
-            color: var(--gray);
-            margin-top: 5px;
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
             .nav {
@@ -1297,6 +729,12 @@
                 font-size: 2.5rem;
             }
 
+            .hero-logo {
+                width: 150px;
+                height: 150px;
+                font-size: 2rem;
+            }
+
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
@@ -1306,66 +744,7 @@
                 width: 100%;
                 max-width: 250px;
             }
-            
-            .community-text {
-                font-size: 1.1rem;
-            }
-            
-            .mission-section {
-                padding: 25px;
-            }
-            
-            .connect-section {
-                padding: 25px;
-            }
-            
-            .codes-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .modal-content {
-                margin: 20% auto;
-                width: 95%;
-            }
-            
-            .games-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            /* Responsive pour la sphère de streamers */
-            .streamers-sphere {
-                width: 90vw;
-                height: 90vw;
-                max-width: 450px;
-                max-height: 450px;
-            }
 
-            .central-logo {
-                width: 100px;
-                height: 100px;
-            }
-
-            .streamer-icon {
-                width: 50px;
-                height: 50px;
-            }
-
-            /* Réajuster les positions pour mobile */
-            .streamer-icon:nth-child(1) { top: 5px; left: 50%; margin-left: -25px; }
-            .streamer-icon:nth-child(2) { top: 30px; right: 50px; }
-            .streamer-icon:nth-child(3) { top: 100px; right: 20px; }
-            .streamer-icon:nth-child(4) { top: 180px; right: 0px; }
-            .streamer-icon:nth-child(5) { bottom: 100px; right: 30px; }
-            .streamer-icon:nth-child(6) { bottom: 50px; right: 70px; }
-            .streamer-icon:nth-child(7) { bottom: 5px; right: 50%; margin-right: -25px; }
-            .streamer-icon:nth-child(8) { bottom: 50px; left: 70px; }
-            .streamer-icon:nth-child(9) { bottom: 100px; left: 30px; }
-            .streamer-icon:nth-child(10) { top: 180px; left: 0px; }
-            .streamer-icon:nth-child(11) { top: 100px; left: 20px; }
-            .streamer-icon:nth-child(12) { top: 30px; left: 50px; }
-            .streamer-icon:nth-child(13), .streamer-icon:nth-child(14), .streamer-icon:nth-child(15), .streamer-icon:nth-child(16) { display: none; }
-
-            /* Responsive pour la nouvelle section Join */
             .join-content {
                 grid-template-columns: 1fr;
                 gap: 30px;
@@ -1391,15 +770,24 @@
             .join-stats {
                 grid-template-columns: 1fr;
             }
+
+            .games-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .members-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="nav">
                 <div class="logo">
-                  <img src="AnassGameZone.webp" alt="AnassGameFamily Logo" style="max-width: 40px; height: 40px; border-radius: 10px; object-fit: cover;">
+                    <div class="logo-img">AGF</div>
                     <div class="logo-text">AnassGameFamily</div>
                 </div>
                 <div class="nav-links">
@@ -1417,187 +805,12 @@
         </div>
     </header>
 
-    <!-- Section Jeux Vidéo -->
-    <section id="gamesSection" class="games-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>🎮 Nos Jeux Favoris</h2>
-                <p>Découvrez les jeux que nous adorons jouer ensemble</p>
-            </div>
-            <div class="games-grid">
-                <div class="game-card">
-                    <img src="https://gaming-cdn.com/images/products/2500/orig/fortnite-pc-epic-games-cover.jpg?v=1759399279" alt="Fortnite" class="game-image">
-                    <div class="game-content">
-                        <h3 class="game-title">Fortnite</h3>
-                        <p class="game-description">Battle Royale légendaire avec construction et modes créatifs innovants.</p>
-                        <div class="game-features">
-                            <span class="game-feature">Battle Royale</span>
-                            <span class="game-feature">Construction</span>
-                            <span class="game-feature">Gratuit</span>
-                        </div>
-                        <div class="game-actions">
-                            <a href="https://discord.gg/xa6Q5yMU" class="btn btn-primary btn-small" target="_blank">Rejoindre</a>
-                            <a href="#" class="btn btn-outline btn-small">Voir Stats</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="game-card">
-                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Valorant" class="game-image">
-                    <div class="game-content">
-                        <h3 class="game-title">Valorant</h3>
-                        <p class="game-description">FPS tactique avec des agents aux capacités uniques et stratégiques.</p>
-                        <div class="game-features">
-                            <span class="game-feature">FPS Tactique</span>
-                            <span class="game-feature">Compétitif</span>
-                            <span class="game-feature">Gratuit</span>
-                        </div>
-                        <div class="game-actions">
-                            <a href="https://discord.gg/xa6Q5yMU" class="btn btn-primary btn-small" target="_blank">Rejoindre</a>
-                            <a href="#" class="btn btn-outline btn-small">Voir Stats</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="game-card">
-                    <img src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Call of Duty" class="game-image">
-                    <div class="game-content">
-                        <h3 class="game-title">Call of Duty</h3>
-                        <p class="game-description">FPS intense avec modes multijoueurs et battle royale Warzone.</p>
-                        <div class="game-features">
-                            <span class="game-feature">FPS</span>
-                            <span class="game-feature">Action</span>
-                            <span class="game-feature">Multijoueur</span>
-                        </div>
-                        <div class="game-actions">
-                            <a href="https://discord.gg/xa6Q5yMU" class="btn btn-primary btn-small" target="_blank">Rejoindre</a>
-                            <a href="#" class="btn btn-outline btn-small">Voir Stats</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="game-card">
-                    <img src="https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="League of Legends" class="game-image">
-                    <div class="game-content">
-                        <h3 class="game-title">League of Legends</h3>
-                        <p class="game-description">MOBA stratégique avec plus de 150 champions uniques à maîtriser.</p>
-                        <div class="game-features">
-                            <span class="game-feature">MOBA</span>
-                            <span class="game-feature">Stratégie</span>
-                            <span class="game-feature">Gratuit</span>
-                        </div>
-                        <div class="game-actions">
-                            <a href="https://discord.gg/xa6Q5yMU" class="btn btn-primary btn-small" target="_blank">Rejoindre</a>
-                            <a href="#" class="btn btn-outline btn-small">Voir Stats</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="game-card">
-                    <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Minecraft" class="game-image">
-                    <div class="game-content">
-                        <h3 class="game-title">Minecraft</h3>
-                        <p class="game-description">Jeu de construction et d'aventure dans un monde cubique infini.</p>
-                        <div class="game-features">
-                            <span class="game-feature">Sandbox</span>
-                            <span class="game-feature">Créatif</span>
-                            <span class="game-feature">Aventure</span>
-                        </div>
-                        <div class="game-actions">
-                            <a href="https://discord.gg/xa6Q5yMU" class="btn btn-primary btn-small" target="_blank">Rejoindre</a>
-                            <a href="#" class="btn btn-outline btn-small">Voir Stats</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="game-card">
-                    <img src="https://images.unsplash.com/photo-1542751371-8b1460e7831a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Rocket League" class="game-image">
-                    <div class="game-content">
-                        <h3 class="game-title">Rocket League</h3>
-                        <p class="game-description">Football joué avec des voitures volantes et des explosions épiques.</p>
-                        <div class="game-features">
-                            <span class="game-feature">Sport</span>
-                            <span class="game-feature">Arcade</span>
-                            <span class="game-feature">Gratuit</span>
-                        </div>
-                        <div class="game-actions">
-                            <a href="https://discord.gg/xa6Q5yMU" class="btn btn-primary btn-small" target="_blank">Rejoindre</a>
-                            <a href="#" class="btn btn-outline btn-small">Voir Stats</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modal de Connexion -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Connexion</h2>
-            </div>
-            <div class="modal-body">
-                <div class="login-options">
-                    <div class="login-option" id="discordLogin">
-                        <div class="login-icon">
-                            <i class="fab fa-discord"></i>
-                        </div>
-                        <div class="login-title">Se connecter avec Discord</div>
-                        <div class="login-description">
-                            Accédez à votre compte Discord pour rejoindre notre communauté
-                        </div>
-                    </div>
-                    
-                    <div class="login-option" id="emailLogin">
-                        <div class="login-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="login-title">Se connecter par Email</div>
-                        <div class="login-description">
-                            Utilisez votre adresse email pour accéder à votre compte
-                        </div>
-                    </div>
-                </div>
-
-                <div id="discordForm" class="login-form">
-                    <div class="form-group">
-                        <label for="discordUsername">Nom d'utilisateur Discord</label>
-                        <input type="text" id="discordUsername" placeholder="Votre nom d'utilisateur Discord">
-                    </div>
-                    <div class="form-group">
-                        <label for="discordPassword">Mot de passe</label>
-                        <input type="password" id="discordPassword" placeholder="Votre mot de passe Discord">
-                    </div>
-                    <div class="form-actions">
-                        <button class="btn btn-cancel" onclick="hideForm('discordForm')">Annuler</button>
-                        <button class="btn btn-primary" onclick="loginWithDiscord()">Se connecter</button>
-                    </div>
-                </div>
-
-                <div id="emailForm" class="login-form">
-                    <div class="form-group">
-                        <label for="email">Adresse Email</label>
-                        <input type="email" id="email" placeholder="votre@email.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Mot de passe</label>
-                        <input type="password" id="password" placeholder="Votre mot de passe">
-                    </div>
-                    <div class="form-actions">
-                        <button class="btn btn-cancel" onclick="hideForm('emailForm')">Annuler</button>
-                        <button class="btn btn-primary" onclick="loginWithEmail()">Se connecter</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
                 <h1>AnassGameFamily</h1>
-                <img src="AnassGameZone.webp" alt="AnassGameFamily Logo" style="max-width: 200px; height: auto; margin-bottom: 20px; border-radius: 50%; box-shadow: 0 0 20px var(--primary-dark);">
+                <div class="hero-logo">AGF</div>
                 <p>Rejoignez notre communauté de gamers passionnés. Discutez, jouez et partagez vos expériences de jeu avec des milliers de membres actifs.</p>
                 <div class="hero-buttons">
                     <a href="https://discord.gg/xa6Q5yMU" class="btn btn-primary" target="_blank">Rejoindre le Serveur</a>
@@ -1607,12 +820,12 @@
         </div>
     </section>
 
-    <!-- NOUVELLE SECTION JOIN THE COMMUNITY AVEC DESIGN AMÉLIORÉ -->
+    <!-- Join Community Section -->
     <section class="join-community-section" id="join">
         <div class="join-container">
             <div class="join-header">
                 <div class="join-logo-container">
-                    <img src="AnassGameZone.webp" alt="AnassGameZone Logo" class="join-main-logo">
+                    <div class="join-main-logo">AG</div>
                 </div>
                 <h1 class="join-title">JOIN THE COMMUNITY</h1>
                 <p class="join-subtitle">Become Part of Something Extraordinary</p>
@@ -1675,6 +888,7 @@
         </div>
     </section>
 
+    <!-- Events Section -->
     <section class="section events" id="events">
         <div class="container">
             <div class="section-title">
@@ -1683,7 +897,6 @@
             </div>
             <div class="events-grid">
                 <div class="event-card">
-                    <img src="https://gaming-cdn.com/images/products/2500/orig/fortnite-pc-epic-games-cover.jpg?v=1759399279" alt="Tournoi Fortnite" class="event-image">
                     <div class="event-date">15 DEC 2024</div>
                     <h3 class="event-title">Tournoi Fortnite</h3>
                     <p class="event-description">Compétition communautaire avec des prix exclusifs pour les gagnants.</p>
@@ -1705,94 +918,181 @@
         </div>
     </section>
 
-    <!-- Le reste du code reste inchangé... -->
+    <!-- Games Section -->
+    <section id="gamesSection" class="games-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>🎮 Nos Jeux Favoris</h2>
+                <p>Découvrez les jeux que nous adorons jouer ensemble</p>
+            </div>
+            <div class="games-grid">
+                <div class="game-card">
+                    <div class="game-image">🎯</div>
+                    <div class="game-content">
+                        <h3 class="game-title">Fortnite</h3>
+                        <p class="game-description">Battle Royale légendaire avec construction et modes créatifs innovants.</p>
+                        <div class="game-features">
+                            <span class="game-feature">Battle Royale</span>
+                            <span class="game-feature">Construction</span>
+                            <span class="game-feature">Gratuit</span>
+                        </div>
+                        <div class="game-actions">
+                            <a href="https://discord.gg/xa6Q5yMU" class="btn btn-primary btn-small" target="_blank">Rejoindre</a>
+                            <a href="#" class="btn btn-outline btn-small">Voir Stats</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-image">🔫</div>
+                    <div class="game-content">
+                        <h3 class="game-title">Valorant</h3>
+                        <p class="game-description">FPS tactique avec des agents aux capacités uniques et stratégiques.</p>
+                        <div class="game-features">
+                            <span class="game-feature">FPS Tactique</span>
+                            <span class="game-feature">Compétitif</span>
+                            <span class="game-feature">Gratuit</span>
+                        </div>
+                        <div class="game-actions">
+                            <a href="https://discord.gg/xa6Q5yMU" class="btn btn-primary btn-small" target="_blank">Rejoindre</a>
+                            <a href="#" class="btn btn-outline btn-small">Voir Stats</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card">
+                    <div class="game-image">⚔️</div>
+                    <div class="game-content">
+                        <h3 class="game-title">Call of Duty</h3>
+                        <p class="game-description">FPS intense avec modes multijoueurs et battle royale Warzone.</p>
+                        <div class="game-features">
+                            <span class="game-feature">FPS</span>
+                            <span class="game-feature">Action</span>
+                            <span class="game-feature">Multijoueur</span>
+                        </div>
+                        <div class="game-actions">
+                            <a href="https://discord.gg/xa6Q5yMU" class="btn btn-primary btn-small" target="_blank">Rejoindre</a>
+                            <a href="#" class="btn btn-outline btn-small">Voir Stats</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Members Section -->
+    <section class="section members" id="members">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nos Membres</h2>
+                <p>Rencontrez notre communauté incroyable</p>
+            </div>
+            <div class="members-grid">
+                <div class="member-card">
+                    <div class="member-header">
+                        <div class="member-avatar">AG</div>
+                        <div class="member-name">AnassGameZone</div>
+                        <div class="member-tag">@anassgamezone</div>
+                    </div>
+                    <div class="member-body">
+                        <div class="member-status">
+                            <div class="status-dot online"></div>
+                            <span>En ligne - En stream</span>
+                        </div>
+                        <div class="social-logos">
+                            <a href="https://discord.gg/xa6Q5yMU" class="social-logo discord-logo" target="_blank">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            <a href="https://kick.com/anassgamezone" class="social-logo kick-logo" target="_blank">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div>
+                        <p>Fondateur principal de la communauté</p>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-header">
+                        <div class="member-avatar">MG</div>
+                        <div class="member-name">MOHAFF2000</div>
+                        <div class="member-tag">@mohaff2000</div>
+                    </div>
+                    <div class="member-body">
+                        <div class="member-status">
+                            <div class="status-dot online"></div>
+                            <span>En ligne</span>
+                        </div>
+                        <div class="social-logos">
+                            <a href="https://discord.gg/xa6Q5yMU" class="social-logo discord-logo" target="_blank">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                        </div>
+                        <p>Co-fondateur & Expert événements</p>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="member-header">
+                        <div class="member-avatar">SG</div>
+                        <div class="member-name">Sanji Gaming</div>
+                        <div class="member-tag">@sanjigaming</div>
+                    </div>
+                    <div class="member-body">
+                        <div class="member-status">
+                            <div class="status-dot offline"></div>
+                            <span>Hors ligne</span>
+                        </div>
+                        <div class="social-logos">
+                            <a href="https://discord.gg/xa6Q5yMU" class="social-logo discord-logo" target="_blank">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            <a href="https://kick.com/ssanjii" class="social-logo kick-logo" target="_blank">
+                                <i class="fas fa-play"></i>
+                            </a>
+                        </div>
+                        <p>Co-fondateur & Stratège contenu</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>AnassGameFamily</h3>
+                    <p style="color: var(--gray); font-size: 0.9rem; line-height: 1.6;">
+                        La communauté gaming francophone dédiée à l'entraide, au jeu et au partage d'expérience.
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <h3>Liens Rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="https://discord.gg/xa6Q5yMU" target="_blank">Rejoindre le Discord</a></li>
+                        <li><a href="#events">Événements</a></li>
+                        <li><a href="#members">Membres</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Social</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://discord.gg/xa6Q5yMU" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
+                        <li><a href="https://www.instagram.com/anass_clips/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2024 AnassGameFamily. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
 
     <script>
-        // Le script JavaScript reste le même que précédemment
-        // Gestion du bouton Rejoindre
-        const joinBtn = document.getElementById('joinBtn');
-        const heroJoinBtn = document.getElementById('heroJoinBtn');
-        const gamesSection = document.getElementById('gamesSection');
-
-        function showGamesSection() {
-            // Masquer toutes les autres sections si nécessaire
-            document.querySelectorAll('.section').forEach(section => {
-                section.style.display = 'none';
-            });
-            
-            // Afficher la section jeux
-            gamesSection.classList.add('active');
-            
-            // Scroll vers la section jeux
-            gamesSection.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Événements sur les boutons Rejoindre
-        joinBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            showGamesSection();
-        });
-        heroJoinBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            showGamesSection();
-        });
-
-        // Logique du Modal de connexion
-        const modal = document.getElementById("loginModal");
-        const loginBtn = document.getElementById("loginBtn");
-        const closeBtn = document.querySelector(".close");
-
-        loginBtn.onclick = function(e) {
-            e.preventDefault();
-            modal.style.display = "block";
-        }
-
-        closeBtn.onclick = function() {
-            modal.style.display = "none";
-            hideAllForms();
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-                hideAllForms();
-            }
-        }
-
-        document.getElementById('discordLogin').onclick = function() {
-            showForm('discordForm');
-        }
-
-        document.getElementById('emailLogin').onclick = function() {
-            showForm('emailForm');
-        }
-
-        function showForm(formId) {
-            hideAllForms();
-            document.getElementById(formId).style.display = 'block';
-        }
-
-        function hideForm(formId) {
-            document.getElementById(formId).style.display = 'none';
-        }
-
-        function hideAllForms() {
-            hideForm('discordForm');
-            hideForm('emailForm');
-        }
-
-        function loginWithDiscord() {
-            alert("Connexion Discord réussie !");
-            modal.style.display = "none";
-            hideAllForms();
-        }
-
-        function loginWithEmail() {
-            alert("Connexion Email réussie !");
-            modal.style.display = "none";
-            hideAllForms();
-        }
-
         // Navigation smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1807,6 +1107,16 @@
                         behavior: 'smooth'
                     });
                 }
+            });
+        });
+
+        // Gestion de l'affichage de la section jeux
+        document.querySelectorAll('a[href="#games"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const gamesSection = document.getElementById('gamesSection');
+                gamesSection.classList.add('active');
+                gamesSection.scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
